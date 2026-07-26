@@ -15,6 +15,10 @@ Upload one to four images of a built space, rendered interior, exterior, or desi
 - **Space Critique mode** — uploaded images are photos or renders of interior/exterior spaces → run Steps 1–8
 - **Competition mode** — uploaded images are design sheets, A0/A1 boards, or competition portfolios → run Steps 1–4 (modified) then Steps A–D
 
+You can also specify the mode explicitly by adding "Space Critique" or "Competition Critique" to your message — this overrides auto-detection and is recommended when uploading a mix of images and drawings.
+
+**Model requirement:** Run on Sonnet or Opus only. Do not run on Haiku — this skill requires India-specific code, standards, and material recall that smaller models cannot reliably supply.
+
 ---
 
 <!-- The following section guides Claude's internal reasoning. It is not shown in the output. -->
@@ -103,7 +107,7 @@ Does the sheet's visual language (typography, rendering style, graphic palette) 
 
 ---
 
-### Step 3 — Read materials (DO NOT OUTPUT this step — for analysis only)
+### Step 3 — Read materials (internal analysis — findings surface via Section 3 of Output Format)
 
 Identify every material visible in the image. For each note:
 
@@ -119,10 +123,24 @@ Identify every material visible in the image. For each note:
 **India material reality check (for Indian projects, Space Critique mode):**
 The actual material palette in Indian government and commercial interiors is: vitrified tiles (Kajaria/Somany 600×600 or 800×800), POP/gypsum moulding painted white or off-white, WPC or PVC board panels with timber-look laminate (not real timber slats), pre-laminated particle board/MDF furniture with PVC edge banding, commercial carpet tiles. If these are present — do not recommend their Western equivalents. Recommend improvements within the realistic India material family.
 
-**Tropical / hot-humid climate check (for AP, Telangana, Tamil Nadu, Kerala, coastal Karnataka — Space Critique mode only):**
-- Carpet tiles in hot-humid climates trap moisture and odour — flag as functional failure if present, recommend vitrified tile with central area rug
-- East and west-facing glazing is a thermal and glare priority — venetian blinds at the glass line are a poor thermal solution; recommend external chajja or solar film first
+**Climate zone check (Space Critique mode only — apply the correct zone for the project location):**
+
+*Hot-humid zone — coastal AP (Visakhapatnam, Vijayawada belt), Kerala, coastal Karnataka, coastal Tamil Nadu:*
+- Carpet tiles trap moisture and odour — flag as functional failure, recommend vitrified tile with a central area rug
+- East and west-facing glazing: venetian blinds at the glass line are a poor thermal solution; recommend external chajja or solar film first
 - Upholstered fabric visitor chairs in high-traffic institutional spaces fail within 18 months — recommend vinyl or leather equivalent
+
+*Composite zone — Telangana (including Hyderabad), interior AP (Anantapur, Kurnool, Kadapa), Maharashtra interior, Delhi NCR:*
+- Large diurnal temperature swings (12–15°C) mean thermal mass and operable windows are first-order responses, not air-conditioning alone
+- East-facing primary openings for morning light; west-facing openings need a deep chajja or jali screen to manage afternoon heat gain
+- Cross-ventilation across the short plan axis; ceiling fans are an operational requirement, not an afterthought
+- Carpet tiles are acceptable in conditioned composite-climate interiors — flag only if the space is unconditioned or poorly ventilated
+
+*Hot-dry zone — Rayalaseema (Anantapur, Kurnool, Kadapa districts), arid interior Maharashtra and Karnataka:*
+- Thermal mass is the primary climate response — thick masonry or double-skin construction
+- Courtyard or light well as a passive cooling device is historically validated; recommend for any new construction with site area
+- Pale exterior finishes reduce solar gain — dark facades should be flagged as a functional error
+- Water features and planting within courtyards are legitimate passive cooling strategies, not decoration
 
 **In Competition mode — compress material analysis:**
 Note the material palette in one sentence. Then assess: Are materials legible at jury-viewing distance, or lost in the representation technique? Is the material choice inseparable from the concept, or applied after form was decided?
@@ -186,7 +204,7 @@ Does the plan show a working functional diagram? Can you identify all program ar
 
 **Space Critique mode — full lighting diagnosis:**
 Do not assess lighting aesthetically only. Assess it functionally:
-- Is the desk lit to minimum 500 lux for sustained paper and screen work? (IS 3646 / NBC 2016 Part 8 Section 2 requirement for office task areas)
+- Is the desk lit to minimum 500 lux for sustained paper and screen work? (IS 3646 / NBC 2016 Part 8 Section 1 requirement for office task areas)
 - Is there a monitor glare problem from the window position? Window behind the officer = silhouette problem. Window behind the monitor = screen wash-out.
 - Is there only one overhead source (single ceiling light/downlight grid)? Single-source overhead creates harsh face shadows during video calls and on documents — a direct functional failure in any workspace.
 - Is the overhead light positioned directly above the visitor's head rather than the officer's? This forces visitors to squint upward — the single most common lighting error in Indian government cabin fit-outs.
